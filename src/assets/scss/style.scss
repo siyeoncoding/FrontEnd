@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
-@import "setting/_fonts.sass";
-@import "setting/_vars.sass";
-@import "setting/_mixin.sass";
-@import "setting/_reset.sass";
+@import "setting/_font";
+@import "setting/_vars";
+@import "setting/_mixin";
+@import "setting/_reset";
 
-@import "section/_header.sass";
-@import "section/_intro.sass";
-@import "section/_skill.sass";
-@import "section/_site.sass";
-@import "section/_port.sass";
-@import "section/_contact.sass";
-@import "section/_footer.sass";
+@import "section/_header";
+@import "section/_intro";
+@import "section/_skill";
+@import "section/_site";
+@import "section/_port";
+@import "section/_contact";
+@import "section/_footer";
