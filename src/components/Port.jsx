@@ -1,7 +1,7 @@
 import React from "react";
 
-const Contact = () => {
-    return <div>Contact</div>;
+const Port = () => {
+    return <div>Port</div>;
 };
 
-export default Contact;
+export default Port;
