@@ -16,7 +16,7 @@ const navigationItems = [
 const MainView = () => {
     return (
         <>
-            <Header navItems={navigationItems} /> {/* 네비게이션 항목 배열을 prop으로 전달 */}
+            <Header navItems={navigationItems} /> {/* 네비게이션 항목 배열을 prop으로 전달해야함*/}
 
             <Home/>
         </>
