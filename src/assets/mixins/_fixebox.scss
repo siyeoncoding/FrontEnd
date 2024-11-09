@@ -1,0 +1,16 @@
+// _mixins.scss
+
+// position-fixed 믹스인 예시
+@mixin position-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+// flex-between 믹스인 예시
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

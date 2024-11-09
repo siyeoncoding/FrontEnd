@@ -1,6 +1,6 @@
 import React from "react";
 
-const Main = ({ children }) => {
+const Home = ({ children }) => {
     return (
         <main id="main" role="main">
             {children}
@@ -8,4 +8,4 @@ const Main = ({ children }) => {
     );
 };
 
-export default Main;
+export default Home;

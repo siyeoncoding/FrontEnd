@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@font-face {
+  font-family: Sunflower;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../font/MADE Sunflower PERSONAL USE.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-display: swap;
+}
+
+
+// 폰트 변수 정의
+$primary-font: 'Inter', sans-serif;
+$secondary-font: 'Sunflower', sans-serif;
+$tertiary-font: 'Chosunilbo_myungjo', serif;

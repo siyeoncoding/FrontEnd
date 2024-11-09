@@ -1,0 +1,134 @@
+@import 'fonts';  // 폰트 관련 SCSS 파일을 임포트
+@import '../mixins/fixebox';  // 믹스인 파일을 임포트
+@import 'color';
+
+#header {
+  @include position-fixed;
+  z-index: 10000;
+  background-color: $white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: $primary-font;  // 기본 폰트를 'Inter'로 설정
+}
+
+.header__inner {
+  @include flex-between;
+  background-color: rgba(116, 99, 99, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 1rem;
+
+  .header__logo {
+    font-family: $secondary-font;  // 로고에 'Sunflower' 폰트 적용
+    font-size: 0.9rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+
+    em {
+      font-size: 10px;
+      display: block;
+      color: $black200;
+    }
+  }
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+    font-family: $primary-font;  // 네비게이션에 'Inter' 폰트 적용
+
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: inline;
+      margin-right: 20px;
+
+      a {
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 14px;
+        position: relative;
+        text-decoration: none;
+        font-family: $primary-font;  // 링크에 'Inter' 폰트 적용
+        color: $black;  // 기본 텍스트 색상 설정
+
+        &::before {
+          content: '';
+          width: calc(100% - 28px);
+          height: 1px;
+          background-color: $black;
+          position: absolute;
+          left: 14px;
+          bottom: 10px;
+          transform: scaleX(0);
+          transition: all 0.3s;
+        }
+
+        &:hover {
+          color: $white;  // 마우스를 올리면 하얀색으로 변경
+        }
+
+        &:hover::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .header__nav__mobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    @media (max-width: 800px) {
+      display: block;
+    }
+
+    span {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: $black;
+      margin-top: 8px;
+      position: relative;
+      transition: transform 0.3s ease;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 40px;
+        height: 2px;
+        background-color: $black;
+        position: absolute;
+        transition: transform 0.3s ease;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: -10px;
+      }
+    }
+
+    &.open span {
+      transform: rotate(45deg);
+    }
+
+    &.open span::before {
+      transform: rotate(90deg);
+      top: 0;
+    }
+
+    &.open span::after {
+      transform: rotate(90deg);
+      bottom: 0;
+    }
+  }
+}
