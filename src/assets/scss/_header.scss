@@ -31,10 +31,76 @@
     }
   }
 
+  .header__nav__mobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    position: relative;
+
+    @media (max-width: 800px) {
+      display: block;
+    }
+
+    span {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: $black;
+      margin-top: 8px;
+      position: relative;
+      transition: transform 0.3s ease;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 40px;
+        height: 2px;
+        background-color: $black;
+        position: absolute;
+        transition: transform 0.3s ease;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: -10px;
+      }
+    }
+
+    &.open span {
+      transform: rotate(45deg);
+    }
+
+    &.open span::before {
+      transform: rotate(90deg);
+      top: 0;
+    }
+
+    &.open span::after {
+      transform: rotate(90deg);
+      bottom: 0;
+    }
+  }
+
   .header__nav {
     display: flex;
     align-items: center;
     font-family: $primary-font;  // 네비게이션에 'Inter' 폰트 적용
+    visibility: hidden;  // 기본적으로 메뉴 숨기기
+    opacity: 0;  // 메뉴를 숨겨놓고
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s; // 애니메이션 효과 추가
+
+    &.show {
+      visibility: visible;  // 메뉴 보이게 하기
+      opacity: 1;  // 메뉴 보이도록 설정
+      transition: opacity 0.3s ease-in-out;
+    }
 
     ul {
       display: flex;
@@ -54,7 +120,7 @@
         position: relative;
         text-decoration: none;
         font-family: $primary-font;  // 링크에 'Inter' 폰트 적용
-        color: $black;  // 기본 텍스트 색상 설정
+        color: $black;
 
         &::before {
           content: '';
