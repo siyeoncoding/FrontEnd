@@ -87,19 +87,12 @@
       bottom: 0;
     }
   }
-
   .header__nav {
-    display: flex;
-    align-items: center;
-    font-family: $primary-font;  // 네비게이션에 'Inter' 폰트 적용
-    visibility: hidden;  // 기본적으로 메뉴 숨기기
-    opacity: 0;  // 메뉴를 숨겨놓고
-    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s; // 애니메이션 효과 추가
+    font-family: 'MadeSunflower', sans-serif;  // 네비게이션 텍스트에 'MadeSunflower' 폰트 적용
+    display: none;  // 기본적으로 네비게이션 숨김
 
     &.show {
-      visibility: visible;  // 메뉴 보이게 하기
-      opacity: 1;  // 메뉴 보이도록 설정
-      transition: opacity 0.3s ease-in-out;
+      display: block;  // show 클래스가 추가되면 네비게이션 표시
     }
 
     ul {
@@ -119,7 +112,7 @@
         padding: 14px;
         position: relative;
         text-decoration: none;
-        font-family: $primary-font;  // 링크에 'Inter' 폰트 적용
+        font-family: 'MadeSunflower', sans-serif;  // 네비게이션 링크에도 'MadeSunflower' 적용
         color: $black;
 
         &::before {
@@ -145,14 +138,30 @@
     }
   }
 
+  // 폰트 정의
+  @font-face {
+    font-family: 'MadeSunflower';
+    src: url('/assets/font/MADE Sunflower PERSONAL USE.otf') format('opentype'); /* public 폴더를 기준으로 절대 경로 사용 */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'MiracleFont';
+    src: url('/assets/font/Miracle Personal use.otf') format('opentype'); /* public 폴더를 기준으로 절대 경로 사용 */
+    font-weight: normal;
+    font-style: normal;
+  }
+
   .header__nav__mobile {
     display: none;
     width: 40px;
     height: 40px;
     cursor: pointer;
+    font-family: 'MiracleFont', sans-serif;  // MiracleFont로 설정
 
-    @media (max-width: 800px) {
-      display: block;
+    @media (max-width: 1500px) {
+      display: block;  // 화면이 800px 이하일 때 버튼 표시
     }
 
     span {

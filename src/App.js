@@ -9,7 +9,6 @@ const MainView = () => {
     return (
         <>
             <Header/>
-            <Intro/>
             <Home/>
 
         </>

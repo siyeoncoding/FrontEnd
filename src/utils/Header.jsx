@@ -27,7 +27,7 @@ const Header = () => {
                 </div>
 
                 {/* 네비게이션 메뉴 */}
-                <nav className={`header__nav ${isMenuVisible ? "show" : ""}`} role="navigation" aria-label="메인 메뉴">
+                <nav className={`header__nav ${isMenuVisible ? "show" : ""}`} role="navigation">
                     <ul>
                         {navigationItems.map((item, index) => (
                             <li key={index}>
@@ -39,15 +39,12 @@ const Header = () => {
 
                 {/* 모바일 메뉴 토글 버튼 */}
                 <div
-                    className={`header__nav__mobile ${isMenuVisible ? "open" : ""}`}
-                    id="headerToggle"
-                    aria-controls="primary-menu"
-                    aria-expanded={isMenuVisible ? "true" : "false"}
+                    className="header__nav__mobile"
+                    onClick={toggleMenuVisibility}
                     role="button"
                     tabIndex="0"
-                    onClick={toggleMenuVisibility}
                 >
-                    <span></span>
+                    {isMenuVisible ? "Close" : "About Me"}
                 </div>
             </div>
         </header>

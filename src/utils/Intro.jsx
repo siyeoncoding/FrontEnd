@@ -1,6 +1,7 @@
 // Intro.jsx
 import React from "react";
 import Header from "./Header";
+import '../assets/scss/_intro.scss';
 
 const INTRO_FIRST = [
     {
