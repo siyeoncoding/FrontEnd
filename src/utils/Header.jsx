@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../assets/scss/_header.scss';
 
+//import color에 모든 색 설정.
 // 네비게이션 항목 배열을 직관적인 이름으로 정의
 const navigationItems = [
     { title: "Intro", url: "#intro" },
