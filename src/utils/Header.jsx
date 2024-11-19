@@ -7,7 +7,7 @@ const navigationItems = [
     { title: "Intro", url: "#intro" },
     { title: "My Stack", url: "#stack" },
     { title: "Portfolio", url: "#portfolio" },
-    { title: "Contact", url: "#contact" }
+    { title: "Contact", url: "#reachOut" }
 ];
 
 const Header = () => {

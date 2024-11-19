@@ -1,0 +1,104 @@
+// _portfolio.scss
+
+#portfolio {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding-top: 100px; // 헤더 크기에 맞게 여백 설정 (조정 가능)
+}
+
+.portfolio-intro {
+  margin-bottom: 200px; // 원하는 간격으로 조정
+}
+
+.project-title {
+  margin-top: 40px; // 제목 위 여백
+  margin-bottom: 0px; // 제목 아래 여백
+  font-size: 1.5em; // 제목 크기
+  color: #333; // 제목 색상
+}
+
+.click-instruction {
+  font-size: 0.5em; // 글자 크기 조정
+  color: #666; // 색상 조정
+  text-align: center; // 중앙 정렬
+  margin-top: 10px; // 위쪽 여백 추가
+  margin-bottom: 100px;
+}
+
+.project-container {
+  margin-top: 20px; // 프로젝트 섹션과 제목 사이 여백
+}
+
+.project {
+  margin-bottom: 60px; // 각 프로젝트 간의 간격
+  position: relative; // 자식 요소의 절대 위치 설정을 위한 상대 위치
+}
+
+.project-image {
+  max-width: 700px; // 최대 너비를 700px로 설정 (필요에 따라 조정 가능)
+  width: 100%; // 부모 요소에 맞게 너비 조정
+  height: auto; // 비율 유지
+  margin-top: 20px; // 이미지 위 여백
+  margin-bottom: 20px; // 이미지 아래 여백
+  cursor: pointer; // 클릭 가능하게 커서 변경
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* 모달이 다른 요소 위에 표시되도록 */
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%; /* 모달의 너비 설정 */
+  max-width: 800px; /* 최대 너비 설정 */
+}
+
+.modal-content {
+  display: flex; /* 플렉스 박스 사용 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.modal-image {
+  flex: 1; /* 이미지 영역이 남은 공간을 차지하도록 설정 */
+  padding: 20px; /* 여백 추가 */
+}
+
+.modal-image img {
+  width: 100%; /* 이미지 너비를 100%로 설정 */
+  height: auto; /* 비율 유지 */
+}
+
+.modal-description {
+  flex: 1; /* 설명 영역이 남은 공간을 차지하도록 설정 */
+  padding: 20px; /* 여백 추가 */
+}
+
+.modal-button-container {
+  display: flex; /* 플렉스 박스 사용 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  margin-top: 20px; /* 버튼과 내용 사이 여백 */
+}
+
+.modal button {
+  padding: 10px 20px;
+  background-color: #6f674a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #6f674a;
+}

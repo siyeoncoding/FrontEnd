@@ -5,16 +5,13 @@
 #header {
   @include position-fixed;
   z-index: 10000;
-  background-color: $white;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #969086;  // 헤더 배경색을 불투명하게 설정
   font-family: $primary-font;  // 기본 폰트를 'Inter'로 설정
 }
 
 .header__inner {
   @include flex-between;
   background-color: rgba(116, 99, 99, 0.1);
-  backdrop-filter: blur(15px);
   padding: 1rem;
 
   .header__logo {

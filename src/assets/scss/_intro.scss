@@ -1,0 +1,129 @@
+// src/assets/scss/_intro.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@font-face {
+  font-family: Sunflower;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../font/MADE Sunflower PERSONAL USE.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-display: swap;
+}
+
+// 폰트 변수 정의
+$primary-font: 'Inter', sans-serif;
+$secondary-font: 'Sunflower', sans-serif;
+$tertiary-font: 'Chosunilbo_myungjo', serif;
+
+body {
+  font-family: $tertiary-font; // 모든 텍스트에 Chosunilbo_myungjo 폰트 적용
+  background-color: rgba(116, 99, 99, 0.1); // 배경색 변경
+}
+
+#intro {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+
+}
+
+.intro-section {
+  margin-top: 110px;
+  margin-bottom: 40px;
+  p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  strong {
+    display: block;
+    font-size: 1.4em;
+    margin-top: 10px;
+    color: #333;
+  }
+}
+
+.sub-keyword {
+  margin-top: 500px; /* 서브 키워드 섹션의 상단 여백 */
+  text-align: center;
+  opacity: 0; /* 초기 상태에서 투명하게 설정 */
+  transform: translateY(20px); /* 아래로 밀어놓기 */
+  transition: opacity 2s, transform 2s; /* 부드러운 전환 효과 */
+
+  &.visible {
+    opacity: 1; /* 불투명하게 설정 */
+    transform: translateY(0); /* 원래 위치로 복귀 */
+  }
+
+  p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+  }
+
+  span {
+    display: block;
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 10px;
+  }
+}
+
+/* 애니메이션 키프레임 정의 */
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* 최종 상태에서 불투명하게 설정 */
+    transform: translateY(0); /* 원래 위치로 복귀 */
+  }
+}
+
+.keywords-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.keyword-item {
+  flex: 1 1 30%; // 3개 한 줄에 배치
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  text-align: center;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // 키워드 항목에만 효과 유지
+  }
+
+  .keyword-icon {
+    font-size: 2em;
+    color: #007bff; // 아이콘 색상
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 1em;
+    color: #666;
+  }
+}
