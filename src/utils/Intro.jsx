@@ -5,7 +5,7 @@ import { FaUser, FaLightbulb, FaUsers } from 'react-icons/fa';
 const INTRO_FIRST = [
     {
         id: "about_me",
-        p: '안녕하세요. 문제 해결을 즐기는 개발자 이수민입니다.',
+        p: '안녕하세요. 문제 해결을 즐기는 개발자 박시연입니다.',
         strong: (
             <>
                 “저는 주어진 목표를 달성하기 위해 끊임없이 나아가며 <br />
@@ -50,7 +50,7 @@ const SUB_KEYWORD = [
     {
         id: 2,
         p: 'WHO AM I?',
-        span: "I'm Lee Su Min",
+        span: "I'm SI YEON PARK",
     },
 ];
 
